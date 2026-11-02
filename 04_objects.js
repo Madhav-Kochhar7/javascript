@@ -1,7 +1,6 @@
 // store data in key-value pairs
 // keys are also called properties
 
-
 // Object.create --> creates a singleton object 
 // const jsUser = new Object()
 //                  - a design pattern that restricts the instantiation of a class or object to a single instance across your entire application
@@ -109,3 +108,43 @@ console.log(Object.entries(appUser))             // turns each key-value pair in
 console.log(appUser.hasOwnProperty("isLoggedIn"));  // checks if the object contains a certain property(key)
 
 //------------------------------------------
+
+// DESTRUCTURING
+
+const course = {
+    courseName : "JS Course",
+    price : "999",
+    courseInstructor : "Hitesh"
+}
+
+const {courseName} = course                         // can now call courseName directly instead of course.courseName
+const {courseInstructor : instructor} = course      // can set an alias for the keyname too
+
+console.log(courseName);
+console.log(instructor);
+
+// object destructuring is majorly used in react while dealing with props
+
+const navbar = ({company}) => {
+
+}
+
+navbar("abc")  
+//------------
+
+//-------------------------------------------------------------------------------------------------
+
+// JSON 
+
+{
+    "name" : "madhav",
+    "courseName" : "JS Course", 
+    "price" : 999
+}
+
+[
+    {},
+    {},
+    {}
+]
+
